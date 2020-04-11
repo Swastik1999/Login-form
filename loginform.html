@@ -1,0 +1,169 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <style type="text/css">
+        .head {
+            text-align: left;
+            font-family: sans-serif;
+            color: red;
+           
+            padding-left: 50px;
+        }
+        #head {
+            background-color: aqua;
+            margin: 0px;
+            padding: 50px;
+        }
+         #dp{float: right;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            
+            margin: 10px;
+            margin-top: 0px;
+            text-align: center;
+            vertical-align:middle;
+            position: relative;
+        }
+         #logout{float: right;
+            height: 40px;
+            width: 100px;
+            margin: 10px;
+           
+            margin-top: 0px;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+        
+            
+        }
+        
+        #status {float: right;
+             height: 40px;
+            width: 100px;
+            margin: 10px;
+            margin-top: 0px;
+            background-color: blue;
+            text-align: center;
+            position: relative;
+            border-radius: 10px;
+            
+            
+        }
+        label{
+            width: 100px;
+            display: inline-block;
+        }
+        #inputform{
+            padding-top: 100px;
+            padding-left: 50px;
+        }
+       
+        
+       
+        
+    </style>
+    <div id="head"><header ><div class="head">
+       <span style="font-size: 300%"><b> New Member Registration</b></span>
+      <a href=""> <div id="dp">
+     <a href=""><img src="dp.png" width="48" height="48" style="margin-right: 30px "/></a>
+        </div></a>
+      <a href=""><div id="logout">
+          <span style="color: aliceblue"> <a href=""><img src="logout.png" width="100" height="48" style="margin-right: 30px "/></a> </span>
+    </div></a>
+        
+        
+       <a href=""> <div id="status">
+            <span style="color: aliceblue">
+    status</span>
+    </div></a>
+    
+        
+        
+   
+        
+     </div>
+     </header>
+    
+    </div>
+       
+       
+        </head>
+    <body>
+        
+        <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#inputimg')
+                        .attr('src', e.target.result)
+                        .width(150)
+                        .height(200);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        </script>
+    
+    <form id="inputform">
+        <label name="FNAME">First Name</label>
+        <input type="text" name="FNAME">
+        <br>
+        <br>
+         <label name="LNAME">Last Name</label>
+        <input type="text" name="LNAME">
+        <br>
+        <br>
+         <label name="ADRESS">Adress</label>
+        <input type="textbox" name="ADRESS" size="50" >
+        <br>
+        <br>
+        <label name="CONTACT">Contact</label>
+        <input type="tel" name="CONTACT" maxlength="12" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+required>
+        <br>
+        <br>
+        <label name="RATE">Rating</label>
+        1<input type="range" name="RATE" id="rangebar" max="5" min="1" >5
+        <br>
+        <br>
+        <label name="ID">ID Number</label>
+        <input type="text" name="ID">
+        <br>
+        <br>
+        <label for="IDType">ID Type</label>
+
+        <select id="IDType">
+            <option value="Aadhar">AADHAR</option>
+            <option value="Defence">DEFENCE</option>
+            <option value="Pan">PAN</option>
+            <option value="Voter">VOTER</option>
+        </select>
+        
+        <div style="float: right;position: relative;margin-top: -400px;margin-right: 300px;padding: 30px; border:solid; ">
+        
+    <img id="inputimg" src="#" alt="your image" style="margin: 30px;border: 20px;" />
+            <br>
+            
+            <input type='file'  onchange="readURL(this);" />
+        </div>
+        
+        <br>
+        <br>
+        <div style="float: right;margin-right:300px" >
+        <a href="home.html"><img src="backbutton.png" width="100" height="48" style="margin-top:-40px;margin-right: 30px "/></a> 
+        <input type="image" src="submitbutton.png" alt="Submit" width="100" height="48">
+        </div>
+        
+        
+        </form>
+    
+    </body>
+
+</html>
